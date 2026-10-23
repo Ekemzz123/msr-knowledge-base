@@ -4,7 +4,7 @@
 
 A single-page web application that serves as a reference guide for **Mining Software Repositories (MSR)** researchers. It helps new PhD students find information about data sources, collection methods, analysis methods, and publication venues in one place.
 
-🔗 **Live site:** https://ekemzz123.github.io/msr-knowledge-base/
+**Live site:** https://ekemzz123.github.io/msr-knowledge-base/
 
 ---
 
@@ -35,8 +35,6 @@ The full requirements and user stories are in [`docs/requirements.md`](docs/requ
 ---
 
 ## Remaining Milestones (Future Work)
-
-|## Remaining Milestones (Future Work)
 
 So far, the page structure, tab navigation, and the Data Sources section are complete. The other three tabs currently show a "Coming soon" message. Here's what's planned for each remaining milestone:
 
