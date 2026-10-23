@@ -4,7 +4,7 @@
 
 A single-page web application that serves as a reference guide for **Mining Software Repositories (MSR)** researchers. It helps new PhD students find information about data sources, collection methods, analysis methods, and publication venues in one place.
 
-🔗 **Live site:** https://ekemzz123.github.io/msr-knowledge-base/
+**Live site:** https://ekemzz123.github.io/msr-knowledge-base/
 
 ---
 
