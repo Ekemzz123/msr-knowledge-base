@@ -1,80 +1,67 @@
-# Requirements – MSR Knowledge Base
+# MSR Knowledge Base
 
-## 1. Project Overview
-The MSR Knowledge Base is a single-page web application that serves as a reference guide for researchers in Mining Software Repositories (MSR). New PhD students in the MSR Research Group often feel overwhelmed because they do not know which data sources exist, how to collect data, which analysis methods to use, or where to publish. This page organizes that information into four sections — Data Sources, Collection Methods, Analysis Methods, and Publication Venues — that users can switch between using tabs.
+![CI](https://github.com/Ekemzz123/msr-knowledge-base/actions/workflows/ci.yml/badge.svg)
 
-## 2. Stakeholders
-- **Customer:** MSR Research Group Lead
-- **Primary users:** New PhD students joining the research group
-- **Secondary users:** Experienced MSR researchers looking for a quick reference
+A single-page web application that serves as a reference guide for **Mining Software Repositories (MSR)** researchers. It helps new PhD students find information about data sources, collection methods, analysis methods, and publication venues in one place.
 
-## 3. User Stories
+🔗 **Live site:** https://ekemzz123.github.io/msr-knowledge-base/
 
-### US1 – Navigate between sections
-As a PhD student, I want to switch between the four categories using tabs at the top of the page, so that I can quickly find the type of information I need.
+---
 
-**Acceptance criteria:**
-- Four tabs are displayed at the top: Data Sources, Collection Methods, Analysis Methods, Publication Venues.
-- Clicking a tab shows only that tab's content and hides the others.
-- The currently selected tab is visually highlighted.
-- The Data Sources tab is shown by default when the page loads.
+## Project Background
+This project was built for the MSR Research Group Lead (the customer). New PhD students joining the group often feel overwhelmed because they don't know what data sources exist, how to collect data, which analysis methods to use, or where to publish. The customer requested a simple, clean web page with four tabs to organize this information.
 
-### US2 – View data sources
-As a PhD student, I want to see a list of common MSR data sources and the kind of data each provides, so that I can choose which data to collect for my research.
+The full requirements and user stories are in [`docs/requirements.md`](docs/requirements.md).
 
-**Acceptance criteria:**
-- The Data Sources section lists all 7 sources: GitHub, Stack Overflow, JIRA, App Stores, Travis CI / Jenkins, Mailing Lists, and npm Registry.
-- Each source shows its name, the kind of data it provides, and a brief description.
-- The information is displayed in a table or list format.
+---
 
-### US3 – Compare collection methods
-As a PhD student, I want to see different data collection methods along with their pros and cons, so that I can choose the most suitable method for my data source.
+## Features Implemented (Milestone 1: Page Structure & Navigation)
+- Header with the project title
+- Four navigation tabs: **Data Sources**, **Collection Methods**, **Analysis Methods**, **Publication Venues**
+- Tab switching with JavaScript: clicking a tab shows its section and hides the others
+- The active tab is highlighted
+- **Data Sources** section with all 7 sources (name, data provided, description) in a table
+- Clean, responsive styling with CSS
 
-**Acceptance criteria:**
-- The Collection Methods section lists all 6 methods: REST APIs, GraphQL, Web Scraping (Selenium), Web Scraping (BeautifulSoup), Database Dumps, and Manual Download.
-- Each method shows its name, what it is used for, and its pros and cons.
-- All methods are formatted consistently.
+---
 
-### US4 – Explore analysis methods
-As a researcher, I want to browse analysis methods along with their type and common use cases, so that I can decide how to analyze the data I have collected.
+## Development Workflow
+1. **Requirements:** extracted user stories from the customer meeting notes (`docs/requirements.md`).
+2. **Planning:** created 6 milestones and 12 issues in GitHub, each linked to a milestone.
+3. **Implementation:** built the page on the `feature/page-structure-navigation` branch and merged it through pull request #13.
+4. **Testing:** wrote tests on the `test/page-structure-navigation` branch and merged them through pull request #14.
+5. **CI/CD:** a GitHub Actions workflow (`.github/workflows/ci.yml`) runs the tests on every push and pull request. When changes reach `main` and the tests pass, it automatically deploys the site to GitHub Pages.
 
-**Acceptance criteria:**
-- The Analysis Methods section lists all 8 methods: Statistical Analysis, Regression Analysis, Thematic Analysis, Grounded Theory, Machine Learning, Time Series Analysis, Network Analysis, and Visualization.
-- Each method shows its name, type of analysis (e.g., quantitative or qualitative), and common use cases.
+---
 
-### US5 – Find publication venues
-As a researcher, I want to see relevant conferences and journals with their focus area, so that I can pick the most appropriate venue to publish my work.
+## Remaining Milestones (Future Work)
 
-**Acceptance criteria:**
-- The Publication Venues section lists all 9 venues (ICSE, FSE, ASE, MSR, EASE, SANER, EMSE, TSE, TOSEM).
-- Each venue shows its full name, abbreviation, type (conference or journal), and focus area.
+|## Remaining Milestones (Future Work)
 
-### US6 – Judge venue relevance
-As a PhD student, I want each venue to show how relevant it is to MSR research, so that I can prioritize where to submit my papers.
+So far, the page structure, tab navigation, and the Data Sources section are complete. The other three tabs currently show a "Coming soon" message. Here's what's planned for each remaining milestone:
 
-**Acceptance criteria:**
-- Each venue displays a relevance level of High or Medium.
-- Conferences and journals are displayed in separate groups.
+### Collection Methods Content (#6, #7)
+This tab will explain the different ways researchers can gather data, from REST APIs and GraphQL to web scraping with Selenium or BeautifulSoup, database dumps like GHTorrent, and simple manual downloads. Each method will include what it's best used for, along with its pros and cons, so students can pick the right approach for their project.
 
-### US7 – Read content comfortably
-As a researcher, I want the page to be clean and easy to read, so that I can focus on the content without distractions.
+### Analysis Methods Content (#8)
+This tab will cover the eight main ways MSR researchers analyze data, including statistical and regression analysis, qualitative methods like thematic analysis and grounded theory, machine learning, time series, network analysis, and visualization. Each one will show what type of analysis it is and when it's commonly used.
 
-**Acceptance criteria:**
-- The page uses readable fonts, consistent spacing, and clear headings.
-- Content is presented in tables or lists rather than long paragraphs.
-- The page has no distracting animations.
+### Publication Venues Content (#9, #10)
+This tab will help students figure out where to publish. It will list the six main conferences (ICSE, FSE, ASE, MSR, EASE, SANER) and three journals (EMSE, TSE, TOSEM), each with its full name, focus area, and how relevant it is to MSR research. Conferences and journals will be shown in separate groups to make them easier to compare.
 
-### US8 – Access the guide anywhere
-As a PhD student, I want to open the knowledge base in my web browser without installing anything, so that I can use it whenever I need it.
+### Styling & Polish (#11, #12)
+Once all the content is in place, the final milestone will focus on making the page look and feel polished, with better support for phones and small screens and refined fonts, spacing, and colours for a more professional look.
 
-**Acceptance criteria:**
-- The page is hosted live on GitHub Pages.
-- The page works in modern browsers (Chrome, Firefox, Edge).
-- The page layout remains usable on smaller screens.
+---
 
-## 4. Non-Functional Requirements
-- **Simplicity:** The interface should be minimal and focus on content, as requested by the customer.
-- **Readability:** Text and tables should be easy to scan, with clear contrast and spacing.
-- **Professional appearance:** Basic modern styling so the page does not look outdated.
-- **Maintainability:** Content should be easy to update by editing the HTML, with styling kept in a separate CSS file.
-- **Availability:** The website should be publicly accessible through GitHub Pages and update automatically after each change to the main branch.
+## Tools Used
+- HTML, CSS, JavaScript
+- Jest + jsdom (testing)
+- GitHub Issues, Milestones, and Pull Requests (project management)
+- GitHub Actions (CI/CD) and GitHub Pages (hosting)
+
+
+---
+
+**Author:** Ekeminiabasi Udodong
+**Course:** COIS 3060H – Software Processes
