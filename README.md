@@ -36,8 +36,6 @@ The full requirements and user stories are in [`docs/requirements.md`](docs/requ
 
 ## Remaining Milestones (Future Work)
 
-|## Remaining Milestones (Future Work)
-
 So far, the page structure, tab navigation, and the Data Sources section are complete. The other three tabs currently show a "Coming soon" message. Here's what's planned for each remaining milestone:
 
 ### Collection Methods Content (#6, #7)
