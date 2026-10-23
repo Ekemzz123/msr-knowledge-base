@@ -1,0 +1,29 @@
+{
+  "name": "msr-knowledge-base",
+  "version": "1.0.0",
+  "description": "The MSR Knowledge Base is a single-page web application that serves as a reference guide for researchers in Mining Software Repositories (MSR). New PhD students in the MSR Research Group often feel overwhelmed because they do not know which data sources exist, how to collect data, which analysis methods to use, or where to publish. This page organizes that information into four sections — Data Sources, Collection Methods, Analysis Methods, and Publication Venues — that users can switch between using tabs.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ekemzz123/msr-knowledge-base.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ekemzz123/msr-knowledge-base/issues"
+  },
+  "homepage": "https://github.com/Ekemzz123/msr-knowledge-base#readme",
+  "devDependencies": {
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2"
+  }
+}
